@@ -1,4 +1,4 @@
-fetch("https://fakestoreapi.com/products")
+fetch("https://api.noroff.dev/api/v1//social/auth/register")
   .then((data) => {
     return data.json();
   })
@@ -8,9 +8,12 @@ fetch("https://fakestoreapi.com/products")
     objectData.map((values) => {
       tableData += ` <tr>
         <td><a href="details.html?id=${values.id}">${values.title}</a></td>
-        <td>${values.description}</td>
-        <td>${values.price}</td>
-        <td><img src="${values.image}"></td>
+        <td>${values.body}</td>
+        <td>${values.tags}</td>
+        <td><img src="${values.media}"></td>
+        <td>${values.created}</td>
+        <td>${values.updated}</td>
+        <td>${values._count}</td>
         </tr>`;
     });
     document.getElementById("tableBody").innerHTML = tableData;
