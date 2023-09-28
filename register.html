@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
     <link rel="stylesheet" href="styles/regForm.css" />
-    <title>Login form</title>
-    <script
-      src="https://kit.fontawesome.com/3834125a3f.js"
-      crossorigin="anonymous"
-    ></script>
+    <title>Register form</title>
+    <script src="https://kit.fontawesome.com/3834125a3f.js" crossorigin="anonymous"></script>
+    <script src="scripts/register.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -26,37 +24,11 @@
 
           <label class="label" for="password">Password</label>
           <i class="fa-solid fa-lock"></i>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            placeholder="Password"
-          />
+          <input id="password" name="password" type="password" placeholder="Password" />
 
           <button type="submit">Submit</button>
         </form>
       </div>
     </div>
-
-    <script>
-      const form = document.getElementById("form");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const prePayload = new FormData(form);
-        const payload = new URLSearchParams(prePayload);
-
-        console.log([...payload]);
-
-        fetch("https://api.noroff.dev/api/v1/social/auth/register", {
-          method: "POST",
-          body: payload,
-        })
-          .then((res) => res.json())
-          .then((data) => console.log(data))
-          .catch((err) => console.log(err));
-      });
-    </script>
   </body>
 </html>
