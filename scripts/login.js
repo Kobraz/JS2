@@ -5,10 +5,10 @@ form.addEventListener("submit", function (e) {
   const email = e.currentTarget[1].value;
   const password = e.currentTarget[2].value;
   // debugger;
-  const payload = {
-    email,
-    password,
-  };
+  // const payload = {
+  //   email,
+  //   password,
+  // };
 
   fetch("https://api.noroff.dev/api/v1/social/auth/login", {
     method: "get",
