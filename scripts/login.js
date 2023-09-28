@@ -11,7 +11,7 @@ form.addEventListener("submit", function (e) {
   };
 
   fetch("https://api.noroff.dev/api/v1/social/auth/login", {
-    method: "GET",
+    method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
