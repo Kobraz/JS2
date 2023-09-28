@@ -2,8 +2,8 @@ const form = document.getElementById("form");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  const email = e.currentTarget[1].value;
-  const password = e.currentTarget[2].value;
+  const email = e.currentTarget[0].value;
+  const password = e.currentTarget[1].value;
 
   fetch(`https://api.noroff.dev/api/v1/social/auth/login?email=${email}&password=${password}`, {
     method: "get",
