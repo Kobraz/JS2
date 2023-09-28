@@ -10,8 +10,8 @@ form.addEventListener("submit", function (e) {
     password,
   };
 
-  fetch("https://api.noroff.dev/api/v1/social/auth/login", {
-    method: "POST",
+  fetch("https://api.noroff.dev/api/v1/auth/login", {
+    method: "get",
     headers: {
       "Content-Type": "application/json",
     },
