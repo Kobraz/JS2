@@ -27,5 +27,6 @@ form.addEventListener("submit", function (e) {
     })
     .catch((err) => {
       console.log(err);
+      console.error("Error fetching data from API: ", err);
     });
 });
