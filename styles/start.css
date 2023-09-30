@@ -2,7 +2,7 @@
 
 .button {
   color: yellow;
-  background: black;
+  background: #461919;
   padding: 15px;
   text-decoration: none;
   border-radius: 5px;
@@ -11,5 +11,5 @@
 }
 
 .button:hover {
-  background: red;
+  background: #953232;
 }
