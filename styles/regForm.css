@@ -163,6 +163,10 @@ button {
   font-weight: bold;
 }
 
+button:hover {
+  background: #953232;
+}
+
 /* .input-group {
   height: 280px;
 }
