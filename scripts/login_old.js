@@ -5,11 +5,12 @@ form.addEventListener("submit", function (e) {
   const email = e.currentTarget[0].value;
   const password = e.currentTarget[1].value;
 
-  fetch(`https://api.noroff.dev/api/v1/social/auth/login?email=${email}&password=${password}`, {
-    method: "get",
+  fetch(`https://api.noroff.dev/api/v1/social/auth/login`, {
+    method: "post",
     headers: {
       "Content-Type": "application/json",
     },
+    body: JSON.stringify({ email, password }),
   })
     .then((res) => {
       if (res.ok) {
@@ -19,7 +20,8 @@ form.addEventListener("submit", function (e) {
       }
     })
     .then((data) => {
-      if (data.exists) {
+      console.log({ data });
+      if (data.accessToken) {
         console.log("Data exists:", data);
       } else {
         console.log("Data does not exist");

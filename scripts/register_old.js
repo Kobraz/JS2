@@ -1,12 +1,5 @@
 const form = document.getElementById("form");
 
-window.addEventListener("DOMContentLoaded", (event) => {
-  const token = localStorage.getItem("kobraz_token");
-  if (token) {
-    window.location.href = "./profile.html";
-  }
-});
-
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   const name = e.currentTarget[0].value;
@@ -32,11 +25,7 @@ form.addEventListener("submit", function (e) {
     },
     body: JSON.stringify(payload),
   })
-    .then((res) => {
-      if (res.ok) {
-        window.location.href = "./login.html";
-      }
-    })
-    //
+    .then((res) => res.json())
+    .then((data) => console.log(data))
     .catch((err) => console.log(err));
 });
