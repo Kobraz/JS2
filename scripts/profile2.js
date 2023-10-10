@@ -34,9 +34,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
   } else {
     window.location.href = "./login.html";
   }
-
-  /* form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const email = e.currentTarget[0].value;
-    const password = e.currentTarget[1].value; */
 });
