@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.page-header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 40px;
+}
+
+.page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.card .tags {
+  color: #888;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.card .auth {
+  color: #888;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.card .created {
+  color: #888;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.card .media img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+}
+
+.page-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.card:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}

@@ -5,27 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles/basic.css" />
+    <link rel="stylesheet" href="styles/posts.css" />
     <script src="./scripts/getPosts.js" defer></script>
   </head>
   <body>
     <div class="page-container">
-      <header class="page-header">MAIN</header>
+      <header class="page-header">Posts</header>
       <main>
-        <table class="table">
-          <thead class="tableHead">
-            <tr>
-              <th scope="col">Title</th>
-              <th scope="col">Body</th>
-              <th scope="col">Tags</th>
-              <th scope="col">Media</th>
-              <th scope="col">Created</th>
-              <th scope="col">Updated</th>
-              <th scope="col">Count</th>
-            </tr>
-          </thead>
-          <tbody id="tableBody"></tbody>
-        </table>
+        <div class="container" id="cards-container"></div>
       </main>
       <footer class="page-footer"></footer>
     </div>

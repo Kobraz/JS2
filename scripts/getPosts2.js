@@ -22,8 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         })
         .then((data) => {
-          const cardsContainer = document.getElementById("cards-container");
-
+          // Assuming data is an array with one or more objects
           data.forEach((post) => {
             const title = post.title;
             const body = post.body;
@@ -37,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const author = post.author;
             const count = post._count;
 
+            // Now you can use these values for each post
             console.log("Title:", title);
             console.log("Body:", body);
             console.log("Tags:", tags);
@@ -48,21 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("ID:", id);
             console.log("Author:", author);
             console.log("Count:", count);
-
-            const card = document.createElement("div");
-            card.classList.add("card");
-
-            const cardContent = `
-              <h2>${title}</h2>
-              <p>${body}</p>
-              <div class="tags">Tags: ${tags.join(", ")}</div>
-              <div class="auth">Author: ${author}</div>
-              <div class="created">Created: ${created}</div>
-              <div class="media"><img src="${media}"></div>
-            `;
-
-            card.innerHTML = cardContent;
-            cardsContainer.appendChild(card);
           });
         })
         .catch((err) => {

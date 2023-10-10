@@ -1,6 +1,6 @@
 const form = document.getElementById("form");
 
-window.addEventListener("load", (event) => {
+window.addEventListener("DOMContentLoaded", (event) => {
   const token = localStorage.getItem("kobraz_token");
   if (token) {
     window.location.href = "./profile.html";
@@ -12,8 +12,8 @@ form.addEventListener("submit", function (e) {
   const email = e.currentTarget[0].value;
   const password = e.currentTarget[1].value;
 
-  fetch(`https://api.noroff.dev/api/v1/social/auth/login`, {
-    method: "post",
+  fetch(`https://api.noroff.dev/api/v1/social/profiles`, {
+    method: "get",
     headers: {
       "Content-Type": "application/json",
     },
