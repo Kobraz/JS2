@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   const token = localStorage.getItem("kobraz_token");
   if (token) {
-    fetch("https://api.noroff.dev/api/v1/social/profiles", {
+    fetch(`https://api.noroff.dev/api/v1/social/profiles/<name>`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           <h2>User Profile</h2>
           <p>Name: ${res.name}</p>
           <p>Email: ${res.email}</p>
-          <!-- Add more profile fields as needed -->
+          
         `;
         console.log(res.name);
         console.log(res.email);
