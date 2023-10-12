@@ -3,8 +3,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const profileInfo = document.getElementById("profile-info");
 
   const token = localStorage.getItem("kobraz_token");
+  const name = localStorage.getItem("name");
+
   if (token) {
-    fetch(`https://api.noroff.dev/api/v1/social/profiles/<name>`, {
+    fetch("https://api.noroff.dev/api/v1/social/profiles/<name>", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
