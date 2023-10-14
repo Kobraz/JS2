@@ -33,11 +33,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 function displayProfile(profile) {
   const { name, email, avatar, posts } = profile;
 
+  const cardsContainer = document.getElementById("cards-container");
+  const card = document.createElement("div");
+  card.classList.add("card");
+
   const cardContent = `
   <div class="_name">Name: ${name}</div>
   <div class="_email">E-mail: ${email}</div>
-  <div class="_following">Following: ${following}</div>
-  <div class="_followers">Followers: ${followers}</div>
+  <div class="_avatar">Avatar: ${avatar}</div>
   <div class="_posts">Posts: ${posts}</div>
   `;
 
