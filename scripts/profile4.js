@@ -31,6 +31,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function displayProfile(profile) {
-  // create html
   const { name, email, avatar, posts } = profile;
+
+  const cardContent = `
+  <div class="_name">Name: ${name}</div>
+  <div class="_email">E-mail: ${email}</div>
+  <div class="_following">Following: ${following}</div>
+  <div class="_followers">Followers: ${followers}</div>
+  <div class="_posts">Posts: ${posts}</div>
+  `;
+
+  card.innerHTML = cardContent;
+  cardsContainer.appendChild(card);
 }
