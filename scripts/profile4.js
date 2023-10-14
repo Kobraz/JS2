@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       );
 
       if (response.ok) {
-        const users = await response.json();
+        const profile = await response.json();
         displayProfile(profile);
       } else {
         console.error("Failed to fetch profile data from API");
@@ -31,5 +31,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function displayProfile(profile) {
+  // create html
   const { name, email, avatar, posts } = profile;
 }
