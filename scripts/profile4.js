@@ -38,9 +38,9 @@ function displayProfile(profile) {
   card.classList.add("card");
 
   const cardContent = `
-  <div class="_name">Name: ${name}</div>
-  <div class="_email">E-mail: ${email}</div>
-  <div class="_avatar">Avatar: ${avatar}</div>
+  <div class="_name">${name}</div>
+  <div class="_email">${email}</div>
+  <div class="_avatar"><img src="${avatar}"></div>
   <div class="_posts">Posts: ${posts}</div>
   `;
 

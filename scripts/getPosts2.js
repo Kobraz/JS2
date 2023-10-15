@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const apiUrl = "https://api.noroff.dev/api/v1/social/posts";
-  let token;
+  const apiUrl = `https://api.noroff.dev/api/v1/social/posts/#all-entries`;
+  /* let token; */
 
   window.addEventListener("load", (event) => {
-    token = localStorage.getItem("kobraz_token");
+    const token = localStorage.getItem("kobraz_token");
     if (token) {
       console.log("accessToken:", token);
 
@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         })
         .then((data) => {
-          // Assuming data is an array with one or more objects
+          const cardsContainer = document.getElementById("cards-container");
+
           data.forEach((post) => {
             const title = post.title;
             const body = post.body;
@@ -36,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const author = post.author;
             const count = post._count;
 
-            // Now you can use these values for each post
             console.log("Title:", title);
             console.log("Body:", body);
             console.log("Tags:", tags);
@@ -48,6 +48,21 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("ID:", id);
             console.log("Author:", author);
             console.log("Count:", count);
+
+            const card = document.createElement("div");
+            card.classList.add("card");
+
+            const cardContent = `
+              <h2>${title}</h2>
+              <p>${body}</p>
+              <div class="tags">Tags: ${tags.join(", ")}</div>
+              <div class="auth">Author: ${author}</div>
+              <div class="created">Created: ${created}</div>
+              <div class="media"><img src="${media}"></div>
+            `;
+
+            card.innerHTML = cardContent;
+            cardsContainer.appendChild(card);
           });
         })
         .catch((err) => {

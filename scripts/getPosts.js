@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const apiUrl = "https://api.noroff.dev/api/v1/social/posts";
+  const apiUrl = `https://api.noroff.dev/api/v1/social/posts/#all-entries`;
   let token;
 
   window.addEventListener("load", (event) => {
